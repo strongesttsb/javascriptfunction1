@@ -12,10 +12,10 @@ function getAge(name, birthYear, currentYear) {
 
 const name = prompt("Введите ваше имя:");
 let birthYear;
-let currentYear = parseInt(prompt("Введите нынешний год:"), 10);
+let currentYear = parseInt(+prompt("Введите нынешний год:"), 10);
 
 do {
-    birthYear = parseInt(prompt("Введите ваш год рождения:"), 10);
+    birthYear = parseInt(+prompt("Введите ваш год рождения:"), 10);
     const result = getAge(name, birthYear, currentYear);
     alert(result);
 } while (birthYear > currentYear); // Повторять, пока год рождения больше текущего года
