@@ -1,7 +1,6 @@
 function getAge(name, birthYear, currentYear) {
     const age = currentYear - birthYear;
 
-    // Проверка на отрицательное значение возраста
     if (age < 0) {
         return `Неправильный год рождения. Введите еще раз.`;
     }
@@ -9,12 +8,10 @@ function getAge(name, birthYear, currentYear) {
     return `${name}, Ваш возраст ${age}`;
 }
 
-// Пример использования
 const name = prompt("Введите ваше имя:");
 let birthYear;
 let currentYear;
 
-// Получаем нынешний год с проверкой
 while (true) {
     currentYear = prompt("Введите нынешний год:");
     if (!isNaN(currentYear) && currentYear.trim() !== "") {
@@ -24,7 +21,7 @@ while (true) {
     alert("Пожалуйста, введите корректный номер года.");
 }
 
-// Получаем год рождения с проверкой
+
 do {
     while (true) {
         birthYear = prompt("Введите ваш год рождения:");
@@ -37,4 +34,4 @@ do {
     
     const result = getAge(name, birthYear, currentYear);
     alert(result);
-} while (birthYear > currentYear); // Повторять, пока год рождения больше текущего года
+} while (birthYear > currentYear); 
